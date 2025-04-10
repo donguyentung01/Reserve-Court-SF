@@ -32,7 +32,7 @@ The script should be able to:
 
 You need to have an existing account with [rec.us](https://www.rec.us/) or create an account otherwise. Each account is associated with a phone number, as each registration requires SMS mobile verification. As of Feb 2025, [rec.us](https://www.rec.us/) blocks virtual numbers (like those created on Twilio, e.g.), so you need to use a non-VOIP number for your account. Do not use your personal number, as it can get difficult to integrate with the script. 
 
-You should rent a phone number on [https://www.smspool.net/purchase/rental](SMSPool). Afterwards, [set up the webhook endpoint](https://www.smspool.net/article/how-to-setup-webhooks-for-smspool-ec19b80ade92) to automatically send verification messages to the Flask endpoint http://54.183.149.104:5000/webhook, which is hosted on an AWS EC2 instance
+You can rent a phone number on [https://www.smspool.net/purchase/rental](SMSPool). Afterwards, [set up the webhook endpoint](https://www.smspool.net/article/how-to-setup-webhooks-for-smspool-ec19b80ade92) to automatically send verification messages to the Flask endpoint http://54.183.149.104:5000/webhook, which is hosted on an AWS EC2 instance
 
 ## How to run
 
