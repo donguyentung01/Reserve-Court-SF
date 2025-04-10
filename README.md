@@ -6,8 +6,9 @@ A Python script to reserve tennis/pickleball courts in [San Francisco](https://w
 
 Tennis/pickleball court reservations in San Francisco are done online on [rec.us](https://www.rec.us/). 
 
-<img width="1366" alt="Screenshot 2025-04-09 at 1 23 56 PM" src="https://github.com/user-attachments/assets/ffd2f69c-950d-4aed-8cb1-64ef0db61c90" />
-
+| !<img width="900" alt="Screenshot 2025-04-09 at 1 23 56 PM" src="https://github.com/user-attachments/assets/ffd2f69c-950d-4aed-8cb1-64ef0db61c90" /> |
+|:--:| 
+| *REC.US reservation website* |
 
 Court registration is open at a specific time during the day. For example, Alice Marble courts are reservable 8 days in advance at exactly 8:00AM each day. 
 
