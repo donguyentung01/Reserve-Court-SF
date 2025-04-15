@@ -241,11 +241,11 @@ def book_court(court, date, sport, start_time, end_time, email, password, phone_
 
     print(make_send_verification_code_request(headers))
     verification_code = get_code(phone_number) 
-
-    wait_for_target_time(target_time)    
-    
-    job_begin_time = t.time()
     print(make_verification_request(verification_code, headers))
+    
+    wait_for_target_time(target_time)    
+
+    job_begin_time = t.time()
     
     if is_multithreaded:
         print("Running reservation program on multi-threads (1 thread per court)")
