@@ -6,15 +6,19 @@ A Python script to reserve tennis/pickleball courts in [San Francisco](https://w
 
 Tennis/pickleball court reservations in San Francisco are done online on [rec.us](https://www.rec.us/). 
 
-<img width="1366" alt="Screenshot 2025-04-09 at 1 23 56 PM" src="https://github.com/user-attachments/assets/ffd2f69c-950d-4aed-8cb1-64ef0db61c90" />
-
+| !<img width="900" alt="Screenshot 2025-04-09 at 1 23 56 PM" src="https://github.com/user-attachments/assets/ffd2f69c-950d-4aed-8cb1-64ef0db61c90" /> |
+|:--:| 
+| *REC.US reservation website* |
 
 Court registration is open at a specific time during the day. For example, Alice Marble courts are reservable 8 days in advance at exactly 8:00AM each day. 
 
 There are 3 main issues with reserving the courts manually: 
 - You have to click/navigate the website really fast as soon as the registration opens, since a lot of players will also try to reserve the same courts. Courts will usually be fully reserved within 5-10 seconds after opening.
-- Court registration requires SMS mobile verification, which can take more time to reserve manually
-<img width="552" alt="Screenshot 2025-04-09 at 1 25 24 PM" src="https://github.com/user-attachments/assets/aa29861b-c881-4488-b3a0-a47b44643700" />
+- Court registration requires SMS mobile verification, which may take a bit more time as it involves switching between your phone and laptop.
+  
+| !<img width="552" alt="Screenshot 2025-04-09 at 1 25 24 PM" src="https://github.com/user-attachments/assets/aa29861b-c881-4488-b3a0-a47b44643700" /> |
+|:--:| 
+| *Website requires SMS mobile verification* |
 
 - The court registration times are not always convenient. For example, Alice Marble's registration opens at 8:00 AM, which may be too early for some people.
 
@@ -28,7 +32,7 @@ The script should be able to:
 
 You need to have an existing account with [rec.us](https://www.rec.us/) or create an account otherwise. Each account is associated with a phone number, as each registration requires SMS mobile verification. As of Feb 2025, [rec.us](https://www.rec.us/) blocks virtual numbers (like those created on Twilio, e.g.), so you need to use a non-VOIP number for your account. Do not use your personal number, as it can get difficult to integrate with the script. 
 
-You should rent a phone number on [https://www.smspool.net/purchase/rental](SMSPool). Afterwards, [set up the webhook endpoint](https://www.smspool.net/article/how-to-setup-webhooks-for-smspool-ec19b80ade92) to automatically send verification messages to the Flask endpoint http://54.183.149.104:5000/webhook, which is hosted on an AWS EC2 instance
+You can rent a phone number on [https://www.smspool.net/purchase/rental](SMSPool). Afterwards, [set up the webhook endpoint](https://www.smspool.net/article/how-to-setup-webhooks-for-smspool-ec19b80ade92) to automatically send verification messages to the Flask endpoint http://54.183.149.104:5000/webhook, which is hosted on an AWS EC2 instance
 
 ## How to run
 
