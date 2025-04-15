@@ -4,7 +4,7 @@ A Python script to reserve tennis/pickleball courts in [San Francisco](https://w
 
 ## DISCLAIMER: 
 
-This project is developed solely for personal and educational purposes. It is not intended to disrupt, abuse, or manipulate any public reservation system. All court reservations made through this script are used appropriately and in good faith — I personally attend and make legitimate use of each booking. This tool is not used to hoard, resell, or otherwise restrict access to public resources. Users are expected to comply with all applicable terms of service and usage policies of the platforms they interact with.
+This project is developed solely for **personal and educational** purposes. It is **not intended to disrupt, abuse, or manipulate** any public reservation system. All court reservations made through this script are **used appropriately and in good faith** — I personally attend and make legitimate use of each booking. This tool is **not used to hoard, resell, or otherwise restrict access** to public resources. Users are expected to comply with all applicable terms of service and usage policies of the platforms they interact with.
 
 ## Background 
 
