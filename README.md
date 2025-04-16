@@ -20,7 +20,7 @@ There are 3 main issues with reserving the courts manually:
 - You have to click/navigate the website really fast as soon as the registration opens, since a lot of players will also try to reserve the same courts. Courts will usually be fully reserved within 5-10 seconds after opening.
 - Court registration requires SMS mobile verification, which may take a bit more time as it involves switching between your phone and laptop.
   
-| !<img width="552" alt="Screenshot 2025-04-09 at 1 25 24 PM" src="https://github.com/user-attachments/assets/aa29861b-c881-4488-b3a0-a47b44643700" /> |
+| <img width="552" alt="Screenshot 2025-04-09 at 1 25 24 PM" src="https://github.com/user-attachments/assets/aa29861b-c881-4488-b3a0-a47b44643700" /> |
 |:--:| 
 | *Website requires SMS mobile verification* |
 
@@ -62,19 +62,19 @@ For example, let's say we want to reserve court Alice Marble from 6:00PM to 7:30
 
 - The script uses Selenium to open and log in to [rec.us](https://www.rec.us/) 2 minutes before the registration opens. Then it retrieves the access token from Cookies--the access token will be attached to all HTTP requests' headers later on. 
 
-| !<img width="946" alt="Screenshot 2025-04-09 at 1 28 32 PM" src="https://github.com/user-attachments/assets/8f8ed1e1-3816-4407-93a6-9073630eb5b9" /> | 
+| <img width="946" alt="Screenshot 2025-04-09 at 1 28 32 PM" src="https://github.com/user-attachments/assets/8f8ed1e1-3816-4407-93a6-9073630eb5b9" /> | 
 |:--:| 
 | *Access token stored in Cookies* |
 
 - 1 minute before the registration opens, submit an HTTP request at https://api.rec.us/v1/users/mobile-totp/send to ask for a mobile verification code. The phone number used for SMS verification must be non-VOIP and needs to be automatically forwarded to the designated Flask webhook endpoint at http://54.183.149.104:5000/webhook (hosted on a running AWS EC2 instance). We recommend using [SMSPool](https://www.smspool.net/) to rent a phone number and set up the necessary webhook.
   
-| !<img width="885" alt="Screenshot 2025-04-09 at 1 45 49 PM" src="https://github.com/user-attachments/assets/3c10f934-e289-4f7d-b304-3e86df2cd160" /> |
+| <img width="885" alt="Screenshot 2025-04-09 at 1 45 49 PM" src="https://github.com/user-attachments/assets/3c10f934-e289-4f7d-b304-3e86df2cd160" /> |
 |:--:| 
 | *Flask endpoint retrieving the log file* |
 
 - The Flask endpoint will store the SMS mobile verification in a log file. The script polls another Flask endpoint (on the same AWS EC2 instance) to find the verification code in the said log file.
 
-| !<img width="938" alt="Screenshot 2025-04-09 at 1 40 55 PM" src="https://github.com/user-attachments/assets/c644a95b-058c-459b-8099-663eeeae3e38" /> |
+| <img width="938" alt="Screenshot 2025-04-09 at 1 40 55 PM" src="https://github.com/user-attachments/assets/c644a95b-058c-459b-8099-663eeeae3e38" /> |
 |:--:| 
 | *Flask endpoint retrieving a verification code within the last 60 seconds* |
 
@@ -84,7 +84,7 @@ For example, let's say we want to reserve court Alice Marble from 6:00PM to 7:30
 
 - If the returned response is OK, then we have successfully reserved the court.
   
-| !<img width="551" alt="Screenshot 2025-04-09 at 1 48 32 PM" src="https://github.com/user-attachments/assets/a04f6086-059f-41b8-bcb1-a399d2aaf35d" /> | 
+| <img width="551" alt="Screenshot 2025-04-09 at 1 48 32 PM" src="https://github.com/user-attachments/assets/a04f6086-059f-41b8-bcb1-a399d2aaf35d" /> | 
 |:--:| 
 | *Court reserved successfully* |
 
